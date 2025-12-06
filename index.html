@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pastas y Carnes">
+  <title>La 120 - Inicio</title>
+  <link rel="stylesheet" href="/src/input.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+  
+  <!-- Navegación -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <a href="index.html" class="flex items-center gap-2">
+            <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+              <a href="/" class="site-logo site-logo-left" aria-label="La 120">
+                <img src="/assets/images/logo.svg" alt="Logo La 120" />
+              </a>
+            </div>
+            <div class="hidden sm:flex flex-col">
+              <a href="/" class="site-logo" aria-label="La 120">
+                <img src="/assets/images/logo.svg" alt="Logo La 120" />
+              </a>
+              <span class="text-sm text-gray-600">Pastas y Carnes</span>
+            </div>
+          </a>
+        </div>
+        
+        <!-- Menú Desktop -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link text-primary">Inicio</a>
+          <a href="menu.html" class="nav-link">Menú</a>
+          <a href="quienes-somos.html" class="nav-link">Quiénes somos</a>
+          <a href="mision.html" class="nav-link">Misión</a>
+          <a href="hacer-pedido.html" class="btn-primary">Hacer pedido</a>
+        </div>
+        
+        <!-- Botón Hamburguesa Móvil -->
+        <button id="menu-toggle" class="md:hidden p-2" aria-label="Abrir menú" aria-expanded="false">
+          <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      
+      <!-- Menú Móvil -->
+      <div id="mobile-menu" class="hidden md:hidden pb-4">
+        <div class="flex flex-col gap-2">
+          <a href="index.html" class="nav-link px-4 py-2 rounded hover:bg-gray-100 text-primary">Inicio</a>
+          <a href="menu.html" class="nav-link px-4 py-2 rounded hover:bg-gray-100">Menú</a>
+          <a href="quienes-somos.html" class="nav-link px-4 py-2 rounded hover:bg-gray-100">Quiénes somos</a>
+          <a href="mision.html" class="nav-link px-4 py-2 rounded hover:bg-gray-100">Misión</a>
+          <a href="hacer-pedido.html" class="btn-primary block text-center mt-2">Hacer pedido</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-primary to-red-900 text-white py-20 md:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center fade-in">
+      <h1 class="text-4xl md:text-6xl font-bold mb-2">La 120</h1>
+      <p class="text-2xl md:text-3xl mb-6 text-secondary font-semibold">Pastas y Carnes</p>
+      <p class="text-xl md:text-2xl mb-8">La perfecta combinación de tradición y sabor</p>
+      <p class="text-lg mb-10 max-w-2xl mx-auto">Disfruta de nuestras exquisitas pastas artesanales y carnes premium en un ambiente acogedor</p>
+        <a href="hacer-pedido.html" class="btn-secondary inline-block text-lg">
+          Hacer tu pedido ahora
+        </a>
+      </div>
+    </div>
+    
+    <!-- Decoración de ondas -->
+    <div class="absolute bottom-0 left-0 right-0">
+      <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="#F9FAFB"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Especialidades -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Nuestras Especialidades</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Lo mejor de dos mundos gastronómicos en un solo lugar</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+        <!-- Pastas -->
+        <div class="card fade-in">
+          <div class="h-64 overflow-hidden">
+            <img src="/assets/images/pasta1.jpg" loading="lazy" alt="Pastas artesanales" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-dark mb-3">Pastas Artesanales</h3>
+            <p class="text-gray-600 mb-4">Elaboradas diariamente con ingredientes frescos y recetas tradicionales italianas. Cada plato es una obra de arte culinaria.</p>
+            <ul class="space-y-2 text-gray-700">
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Masa fresca hecha a mano
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Salsas caseras tradicionales
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Ingredientes importados de Italia
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Carnes -->
+        <div class="card fade-in">
+          <div class="h-64 overflow-hidden">
+            <img src="/assets/images/meat1.jpg" loading="lazy" alt="Carnes premium" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-dark mb-3">Carnes Premium</h3>
+            <p class="text-gray-600 mb-4">Cortes selectos preparados a la perfección en nuestra parrilla. Cada bocado es una experiencia memorable de sabor y textura.</p>
+            <ul class="space-y-2 text-gray-700">
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Cortes premium seleccionados
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Maduración perfecta
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Cocción a la parrilla artesanal
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-16 bg-gradient-to-r from-primary to-red-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">¿Listo para una experiencia gastronómica única?</h2>
+      <p class="text-xl mb-8 text-secondary">Haz tu pedido ahora y disfruta de nuestros platillos en la comodidad de tu hogar</p>
+      <a href="hacer-pedido.html" class="btn-secondary inline-block text-lg">Ver menú y hacer pedido</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4 text-secondary">120 Pastas y Carnes</h3>
+          <p class="text-gray-300">La mejor combinación de pastas artesanales y carnes premium desde 1995.</p>
+        <div>
+          <h3 class="text-xl font-bold mb-4 text-secondary">120 Pastas y Carnes</h3>
+          <p class="text-gray-300">La mejor combinación de pastas artesanales y carnes premium desde 1995.</p>
+        </div>
+          <ul class="space-y-2 text-gray-300">
+            <li>📍 Av. Principal 120, Ciudad</li>
+            <li>📞 +1 (555) 123-4567</li>
+            <li>📧 info@pastasycarnes120.com</li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Horarios</h4>
+          <ul class="space-y-2 text-gray-300">
+            <li>Lunes - Viernes: 12:00 - 23:00</li>
+            <li>Sábados: 12:00 - 00:00</li>
+            <li>Domingos: 12:00 - 22:00</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2024 120 Pastas y Carnes. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

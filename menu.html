@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Menú de La 120 - Descubre nuestros deliciosos platos">
+  <title>Menú - La 120 Pastas y Carnes</title>
+  <link rel="stylesheet" href="/src/input.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+  
+  <!-- Navegación -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center">
+          <a href="index.html" class="flex items-center gap-2">
+            <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+              <a href="/" class="site-logo site-logo-left" aria-label="La 120">
+                <img src="/assets/images/logo.svg" alt="Logo La 120" />
+              </a>
+            </div>
+            <div class="hidden sm:flex flex-col">
+              <a href="/" class="site-logo" aria-label="La 120">
+                <img src="/assets/images/logo.svg" alt="Logo La 120" />
+              </a>
+              <span class="text-sm text-gray-600">Pastas y Carnes</span>
+            </div>
+          </a>
+        </div>
+        
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link">Inicio</a>
+          <a href="menu.html" class="nav-link text-primary">Menú</a>
+          <a href="quienes-somos.html" class="nav-link">Quiénes somos</a>
+          <a href="mision.html" class="nav-link">Misión</a>
+          <a href="hacer-pedido.html" class="btn-primary">Hacer pedido</a>
+        </div>
+        
+        <button id="menu-toggle" class="md:hidden p-2" aria-label="Abrir menú">
+          <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      
+      <div id="mobile-menu" class="hidden md:hidden pb-4">
+        <div class="flex flex-col gap-2">
+          <a href="index.html" class="nav-link px-4 py-2 rounded hover:bg-gray-100">Inicio</a>
+          <a href="menu.html" class="nav-link px-4 py-2 rounded hover:bg-gray-100 text-primary">Menú</a>
+          <a href="quienes-somos.html" class="nav-link px-4 py-2 rounded hover:bg-gray-100">Quiénes somos</a>
+          <a href="mision.html" class="nav-link px-4 py-2 rounded hover:bg-gray-100">Misión</a>
+          <a href="hacer-pedido.html" class="btn-primary block text-center mt-2">Hacer pedido</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero del Menú -->
+  <section class="bg-gradient-to-br from-primary to-red-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Nuestro Menú</h1>
+      <p class="text-xl text-secondary">Explora nuestra selección de platos exquisitos</p>
+    </div>
+  </section>
+
+  <!-- Galería rápida (fotos relacionadas al menú) -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-6">
+        <figure class="rounded-xl overflow-hidden shadow-lg bg-white">
+          <img src="/assets/images/pasta1.jpg" loading="lazy" alt="Pastas artesanales" class="w-full h-56 object-cover">
+          <figcaption class="p-4 text-center">
+            <h4 class="font-semibold">Pastas Artesanales</h4>
+            <p class="text-sm text-gray-500">Hechas a mano cada día</p>
+          </figcaption>
+        </figure>
+
+        <figure class="rounded-xl overflow-hidden shadow-lg bg-white">
+          <img src="/assets/images/lomo.jpg" loading="lazy" alt="Carnes premium a la parrilla" class="w-full h-56 object-cover">
+          <figcaption class="p-4 text-center">
+            <h4 class="font-semibold">Carnes a la Parrilla</h4>
+            <p class="text-sm text-gray-500">Cortes premium y madurados</p>
+          </figcaption>
+        </figure>
+
+        <figure class="rounded-xl overflow-hidden shadow-lg bg-white">
+          <img src="/assets/images/wines.jpg" loading="lazy" alt="Selección de vinos" class="w-full h-56 object-cover">
+          <figcaption class="p-4 text-center">
+            <h4 class="font-semibold">Selección de Vinos</h4>
+            <p class="text-sm text-gray-500">Argentinos e italianos</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menú de Pastas -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-dark mb-8 text-center">Pastas Artesanales</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Pasta 1: Carbonara -->
+        <div class="card">
+          <div class="h-48 overflow-hidden">
+              <img src="/assets/images/carbonara.jpg" loading="lazy" alt="Pasta Carbonara" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold text-dark">Pasta Carbonara</h3>
+              <span class="text-2xl font-bold text-primary">$12.99</span>
+            </div>
+            <p class="text-gray-600 mb-2">Cremosa pasta con panceta ahumada, huevo, parmesano y pimienta negra. Receta romana auténtica.</p>
+            <span class="text-xs text-gray-500 italic">Fettuccine • 450g</span>
+          </div>
+        </div>
+
+        <!-- Pasta 2: Fettuccine Alfredo -->
+        <div class="card">
+          <div class="h-48 overflow-hidden">
+              <img src="/assets/images/alfredo.jpg" loading="lazy" alt="Fettuccine Alfredo" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold text-dark">Fettuccine Alfredo</h3>
+              <span class="text-2xl font-bold text-primary">$11.99</span>
+            </div>
+            <p class="text-gray-600 mb-2">Fettuccine bañados en salsa cremosa de mantequilla y queso parmesano italiano. Clásico irresistible.</p>
+            <span class="text-xs text-gray-500 italic">Fettuccine • 400g</span>
+          </div>
+        </div>
+
+        <!-- Pasta 3: Lasagna -->
+        <div class="card">
+          <div class="h-48 overflow-hidden">
+              <img src="/assets/images/lasagna.jpg" loading="lazy" alt="Lasagna Casera" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold text-dark">Lasagna Casera</h3>
+              <span class="text-2xl font-bold text-primary">$14.99</span>
+            </div>
+            <p class="text-gray-600 mb-2">Capas de pasta fresca, carne molida, quesos y salsa boloñesa. Horneada hasta la perfección dorada.</p>
+            <span class="text-xs text-gray-500 italic">Porción generosa • 500g</span>
+          </div>
+        </div>
+
+        <!-- Pasta 4: Ravioles de Ricota y Espinaca -->
+        <div class="card">
+          <div class="h-48 overflow-hidden">
+              <img src="/assets/images/ravioles.jpg" loading="lazy" alt="Ravioles" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold text-dark">Ravioles Ricota y Espinaca</h3>
+              <span class="text-2xl font-bold text-primary">$13.99</span>
+            </div>
+            <p class="text-gray-600 mb-2">Ravioles rellenos de ricota fresca y espinaca, bañados en salsa de mantequilla con salvia.</p>
+            <span class="text-xs text-gray-500 italic">12 unidades • Hechos a mano</span>
+          </div>
+        </div>
+
+        <!-- Pasta 5: Penne Arrabiata -->
+        <div class="card">
+          <div class="h-48 overflow-hidden">
+              <img src="/assets/images/penne.jpg" loading="lazy" alt="Penne Arrabiata" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold text-dark">Penne Arrabiata</h3>
+              <span class="text-2xl font-bold text-primary">$10.99</span>
+            </div>
+            <p class="text-gray-600 mb-2">Penne al dente con salsa de tomate picante, ajo, chile y perejil fresco. Para los que aman lo intenso.</p>
+            <span class="text-xs text-gray-500 italic">Penne • 400g • Picante 🌶️</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menú de Carnes -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-dark mb-8 text-center">Carnes Premium a la Parrilla</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Carne 1: Lomo a la Parrilla -->
+        <div class="card">
+          <div class="h-48 overflow-hidden">
+              <img src="/assets/images/lomo.jpg" loading="lazy" alt="Lomo a la Parrilla" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold text-dark">Lomo a la Parrilla</h3>
+              <span class="text-2xl font-bold text-primary">$22.99</span>
+            </div>
+            <p class="text-gray-600 mb-2">Jugoso lomo de res premium a la parrilla, acompañado de vegetales asados y papas gratinadas.</p>
+            <span class="text-xs text-gray-500 italic">300g • Término a elección</span>
+          </div>
+        </div>
+
+        <!-- Carne 2: Bife de Chorizo -->
+        <div class="card">
+          <div class="h-48 overflow-hidden">
+              <img src="/assets/images/bife.jpg" loading="lazy" alt="Bife de Chorizo" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold text-dark">Bife de Chorizo Argentino</h3>
+              <span class="text-2xl font-bold text-primary">$24.99</span>
+            </div>
+            <p class="text-gray-600 mb-2">Corte argentino premium, sellado a la perfección. Incluye chimichurri casero y guarnición del día.</p>
+            <span class="text-xs text-gray-500 italic">400g • Madurado 21 días</span>
+          </div>
+        </div>
+
+        <!-- Carne 3: Entraña -->
+        <div class="card">
+          <div class="h-48 overflow-hidden">
+              <img src="/assets/images/entrana.jpg" loading="lazy" alt="Entraña a la Parrilla" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold text-dark">Entraña a la Parrilla</h3>
+              <span class="text-2xl font-bold text-primary">$19.99</span>
+            </div>
+            <p class="text-gray-600 mb-2">Tierna entraña marinada en especias secretas y cocinada a punto. Servida con ensalada fresca y papas.</p>
+            <span class="text-xs text-gray-500 italic">350g • Marinado 24h</span>
+          </div>
+        </div>
+
+        <!-- Carne 4: T-Bone Steak -->
+        <div class="card">
+          <div class="h-48 overflow-hidden">
+              <img src="/assets/images/tbone.jpg" loading="lazy" alt="T-Bone Steak" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold text-dark">T-Bone Steak</h3>
+              <span class="text-2xl font-bold text-primary">$26.99</span>
+            </div>
+            <p class="text-gray-600 mb-2">Impresionante corte en T con lomo y solomillo. Para los verdaderos amantes de la carne a la parrilla.</p>
+            <span class="text-xs text-gray-500 italic">500g • Corte americano</span>
+          </div>
+        </div>
+
+        <!-- Carne 5: Costillas BBQ -->
+        <div class="card">
+          <div class="h-48 overflow-hidden">
+              <img src="/assets/images/costillas.jpg" loading="lazy" alt="Costillas BBQ" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold text-dark">Costillas BBQ Ahumadas</h3>
+              <span class="text-2xl font-bold text-primary">$18.99</span>
+            </div>
+            <p class="text-gray-600 mb-2">Costillas de cerdo ahumadas lentamente, glaseadas con nuestra salsa BBQ secreta. Se caen del hueso.</p>
+            <span class="text-xs text-gray-500 italic">600g • Ahumado 6h</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menú de Vinos -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-dark mb-4 text-center">Selección de Vinos</h2>
+      <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Acompaña tu comida con nuestra cuidada selección de vinos argentinos e italianos</p>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Vino 1: Malbec Premium -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-br from-red-900 to-red-700 h-32 flex items-center justify-center">
+            <svg class="w-16 h-16 text-white opacity-50" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"/>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <div>
+                <h3 class="text-xl font-bold text-dark">Catena Zapata Malbec</h3>
+                <p class="text-sm text-gray-500">Mendoza, Argentina</p>
+              </div>
+              <span class="text-2xl font-bold text-primary">$45.00</span>
+            </div>
+            <p class="text-gray-600 mb-2">Vino tinto de alta gama con notas de ciruela, chocolate y vainilla. Ideal para carnes rojas.</p>
+            <div class="flex gap-2 mt-3">
+              <span class="px-2 py-1 bg-red-100 text-red-800 text-xs rounded">Tinto</span>
+              <span class="px-2 py-1 bg-gray-100 text-gray-800 text-xs rounded">750ml</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vino 2: Chianti Classico -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-br from-red-800 to-red-600 h-32 flex items-center justify-center">
+            <svg class="w-16 h-16 text-white opacity-50" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"/>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <div>
+                <h3 class="text-xl font-bold text-dark">Antinori Chianti Classico</h3>
+                <p class="text-sm text-gray-500">Toscana, Italia</p>
+              </div>
+              <span class="text-2xl font-bold text-primary">$38.00</span>
+            </div>
+            <p class="text-gray-600 mb-2">Clásico italiano con carácter, perfecto para acompañar pastas con salsa de tomate y carnes.</p>
+            <div class="flex gap-2 mt-3">
+              <span class="px-2 py-1 bg-red-100 text-red-800 text-xs rounded">Tinto</span>
+              <span class="px-2 py-1 bg-gray-100 text-gray-800 text-xs rounded">750ml</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vino 3: Pinot Grigio -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-br from-yellow-400 to-yellow-300 h-32 flex items-center justify-center">
+            <svg class="w-16 h-16 text-white opacity-50" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"/>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <div>
+                <h3 class="text-xl font-bold text-dark">Santa Margherita Pinot Grigio</h3>
+                <p class="text-sm text-gray-500">Valdadige, Italia</p>
+              </div>
+              <span class="text-2xl font-bold text-primary">$32.00</span>
+            </div>
+            <p class="text-gray-600 mb-2">Vino blanco fresco y ligero con notas cítricas. Excelente con pastas en salsa blanca.</p>
+            <div class="flex gap-2 mt-3">
+              <span class="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded">Blanco</span>
+              <span class="px-2 py-1 bg-gray-100 text-gray-800 text-xs rounded">750ml</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vino 4: Cabernet Sauvignon -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-br from-purple-900 to-purple-700 h-32 flex items-center justify-center">
+            <svg class="w-16 h-16 text-white opacity-50" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"/>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <div>
+                <h3 class="text-xl font-bold text-dark">Luigi Bosca Cabernet</h3>
+                <p class="text-sm text-gray-500">Mendoza, Argentina</p>
+              </div>
+              <span class="text-2xl font-bold text-primary">$28.00</span>
+            </div>
+            <p class="text-gray-600 mb-2">Robusto y elegante, con taninos suaves. Compañero perfecto para cortes de carne potentes.</p>
+            <div class="flex gap-2 mt-3">
+              <span class="px-2 py-1 bg-red-100 text-red-800 text-xs rounded">Tinto</span>
+              <span class="px-2 py-1 bg-gray-100 text-gray-800 text-xs rounded">750ml</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vino 5: Prosecco -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-br from-green-400 to-green-300 h-32 flex items-center justify-center">
+            <svg class="w-16 h-16 text-white opacity-50" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"/>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <div>
+                <h3 class="text-xl font-bold text-dark">La Marca Prosecco</h3>
+                <p class="text-sm text-gray-500">Veneto, Italia</p>
+              </div>
+              <span class="text-2xl font-bold text-primary">$25.00</span>
+            </div>
+            <p class="text-gray-600 mb-2">Espumante italiano fresco y afrutado. Perfecto como aperitivo o para celebrar.</p>
+            <div class="flex gap-2 mt-3">
+              <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded">Espumante</span>
+              <span class="px-2 py-1 bg-gray-100 text-gray-800 text-xs rounded">750ml</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-16 bg-gradient-to-r from-primary to-red-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">¿Se te antojó algo?</h2>
+      <p class="text-xl mb-8 text-secondary">Ordena ahora y disfruta de nuestros platos en casa</p>
+      <a href="hacer-pedido.html" class="btn-secondary inline-block text-lg">Hacer mi pedido</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4 text-secondary">La 120 Pastas y Carnes</h3>
+          <p class="text-gray-300">La mejor combinación de pastas artesanales y carnes premium desde 1995.</p>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Contacto</h4>
+          <ul class="space-y-2 text-gray-300">
+            <li>📍 Av. Principal 120, Ciudad</li>
+            <li>📞 +1 (555) 123-4567</li>
+            <li>📧 info@pastasycarnes120.com</li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Horarios</h4>
+          <ul class="space-y-2 text-gray-300">
+            <li>Lunes - Viernes: 12:00 - 23:00</li>
+            <li>Sábados: 12:00 - 00:00</li>
+            <li>Domingos: 12:00 - 22:00</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2024 La 120 Pastas y Carnes. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

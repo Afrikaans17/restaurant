@@ -1,0 +1,23 @@
+{
+  "name": "pastas-y-carnes-120",
+  "version": "1.0.0",
+  "description": "Sitio web para restaurante Pastas y Carnes 120",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": ["restaurante", "pastas", "carnes", "tailwind"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "gh-pages": "^6.1.0",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.3.6",
+    "vite": "^7.2.6"
+  }
+}
